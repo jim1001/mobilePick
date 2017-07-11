@@ -1,6 +1,6 @@
-name:
+name: MobilePick
 version: 0.0.1
-build: 1
+build: 2
 encrypt stacks: false
 multiple instances: false
 relaunch in background: false
