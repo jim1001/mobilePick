@@ -1,6 +1,6 @@
 name: MobilePick
-version: 0.0.1
-build: 2
+version: 0.1.0
+build: 3
 encrypt stacks: false
 multiple instances: false
 relaunch in background: false
@@ -62,4 +62,4 @@ build profiles:
       android:
   release:
   beta:
-  development:
+  dev:
