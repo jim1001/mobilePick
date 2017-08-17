@@ -10,6 +10,7 @@ on preopencard
 end preopencard
 
 command myMobilePick
+   #myMobilePick command is called by the mouseUp event handler of  button "Option Menu"
    mobilePick sHelpOptsStr
    set the label of button "Option Menu" to sHelpOptsArr[the result]
  end myMobilePick
