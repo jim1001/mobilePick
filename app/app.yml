@@ -1,5 +1,5 @@
 name: MobilePick
-version: 0.3.0
+version: 0.4.0
 build: 1
 encrypt stacks: false
 multiple instances: false

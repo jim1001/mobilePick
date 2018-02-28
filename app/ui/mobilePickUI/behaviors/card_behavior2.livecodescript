@@ -13,27 +13,16 @@ end preopencard
 command myMobilePick
    mobilePick sHelpOptsStr
    put the result into sChoiceIndex
-   set the menuHistory of button "Option Menu" to sChoiceIndex
-   set the label of button "Option Menu" to sHelpOptsArr[sChoiceIndex]   -- setting menuHistory alone didn't work 
+   set the label of button "Option Menu" to sHelpOptsArr[sChoiceIndex] 
  end myMobilePick
 
- -- playButton
- -- 
- -- Called by mouseUp event of button "Play"
- --
+-- playButton
+-- 
+-- Called by mouseUp event of button "Play"
+-- Would expect menuHistory to agree with item no of label 
+-- but can't rely on menuhistory in mobile environment
 command playButton
-   local tLabel, tChoice
-   
-   #Would expect menuhistory to agree with item no of label.
-   #However tChoice always = 1 no matter what was selected
-   #So can't rely on menuhistory in mobile environment
-   #put the menuhistory of button "Option Menu" into tChoice -- doesn't give expected
-   put the menuHistory of button "Option Menu" into tChoice
-   put  the label of button "Option Menu" into tLabel
-   answer "Option menu index:" && tChoice && "Option menu label:" && tLabel
-   
-   
-   #This worked with set the label... in myMobilePick
-   --    put  the label of button "Option Menu" into tLabel
+    local tLabel
+    put  the label of button "Option Menu" into tLabel
    answer "The video " && tLabel & ", Choice "  && sChoiceIndex & ", will now play"
 end playButton
