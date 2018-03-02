@@ -11,10 +11,19 @@ on preopencard
 end preopencard
 
 command myMobilePick
+   local tPriorIndex, tChoice, tLabel
+   put sChoiceIndex into tPriorIndex
    mobilePick sHelpOptsStr
-   put the result into sChoiceIndex
-   set the label of button "Option Menu" to sHelpOptsArr[sChoiceIndex] 
- end myMobilePick
+   put the result into tChoice
+   if tChoice = 0 then 
+      put tPriorIndex into sChoiceIndex
+   else
+      put tChoice into sChoiceIndex
+   end if
+   put sHelpOptsArr[sChoiceIndex] into tLabel
+   set the label of button "Option Menu" to tLabel
+   answer "The video " && tLabel & ", Choice "  && sChoiceIndex & ", will now play"
+end myMobilePick
 
 -- playButton
 -- 
