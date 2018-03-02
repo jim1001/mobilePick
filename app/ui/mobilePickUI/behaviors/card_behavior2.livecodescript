@@ -11,8 +11,9 @@ on preopencard
 end preopencard
 
 command myMobilePick
-   mobilePick sHelpOptsStr
+   mobilePick sHelpOptsStr,"cancelDone"
    put the result into sChoiceIndex
+   answer sChoiceIndex
    set the label of button "Option Menu" to sHelpOptsArr[sChoiceIndex] 
  end myMobilePick
 
